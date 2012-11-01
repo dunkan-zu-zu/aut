@@ -1,0 +1,22 @@
+//
+   Created with JetBrains WebStorm.
+   User: Technodrive
+   Date: 30.10.12
+   Time: 5:28
+   To change this template use File | Settings | File Templates.
+html
+    include title
+
+    body
+        h1=Title
+        br
+        include heder
+        BR
+        form(method="POST", action="/remove" )
+            h3 УДАЛЕНИЕ ПОЛЬЗОВАТЕЛЕЙ
+            H4      Введите имя пользователя которого желаете удалить
+            br
+            input(type="text", name="RemovesUsersName")
+
+            br
+            input(type="submit",value="Remove")

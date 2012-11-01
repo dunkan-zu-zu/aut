@@ -1,0 +1,36 @@
+h1,h2,h3,h4{ text-align: center;
+
+    font: "FreeSans";    }
+form{text-align: center;}
+h1{
+    color: #006400;
+}
+
+font{font: "Book Antiqua";}
+h5{
+    text-align: right;
+}
+table{
+    align: center;
+    width:100%;
+    background-color: yellow;
+
+}
+p{
+    color:  blue;
+     font: "Book Antiqua";
+
+}
+
+td{
+    background-color: #9acd32;
+    text-align: center;
+
+}
+
+textarea{
+        text-align: center;
+}
+div{
+    width:100px; height:100px;background:#F00;
+}

@@ -1,0 +1,31 @@
+html
+    include title
+    body
+
+        H1 Регистрация пользователей
+        br
+        include heder
+        h2(color="red")=ErrorMessage
+        form(method="POST", action="/reg" )
+
+            h3 Имя
+
+            input(type="text", name="usersName")
+            h3 Фамилия
+
+            input(type="text", name="usersSurname")
+            br
+            h3 Пароль
+
+            input(type="text",name="usersPassword1" )
+            br
+            h3 Подтверждение пароля
+
+            input(type="text",name="usersPassword2" )
+            br
+            h3 E-mail :
+            input(type="text",name="usersEmail" )
+
+            br
+            br
+            input(type="submit",value="Save")

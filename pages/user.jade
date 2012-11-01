@@ -1,0 +1,15 @@
+html
+    include title
+
+    body
+        h1=user
+        br
+        include heder
+
+        each text in texts
+            form
+                h5=text.data
+                br
+                textarea(align="center")=text.text
+
+

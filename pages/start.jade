@@ -1,0 +1,31 @@
+
+html
+    include title
+    body
+      h1=Title
+      br
+
+      include heder
+      br
+      h4 Авторизуйтесь
+      br
+      H4=message
+      form(method="POST", action="/aut" )
+         h3 Имя
+         input(type="text", name="usersName")
+         br
+         h3 Пароль
+
+         input(type="text",name="usersPassword" )
+         br
+
+
+         input(type="submit",value="Save")
+       br
+          br
+              br
+       h3
+          a(href="/reg")  Регистрация.
+          br
+          a(href="/all")  Все пользователи.
+

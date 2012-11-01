@@ -1,0 +1,30 @@
+//
+   Created with JetBrains WebStorm.
+   User: Technodrive
+   Date: 31.10.12
+   Time: 4:45
+   To change this template use File | Settings | File Templates.
+
+
+html
+    include title
+    body(onload="RegAndExit()")
+        H1=Username
+        br
+        include heder
+
+        each text in texts
+              form
+                    h5=text.data
+                    br
+                    textarea(align="center")=text.text
+
+                    form(method="post", action="/textRemove/"+text._id)
+                              H5
+                                input(type="submit",value="remove")
+
+        form(method="post", action="/myPage")
+            textarea( type="text",name="text",cols=40,rows=5)
+            br
+            input(type="submit",value="Save")
+
