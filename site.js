@@ -127,13 +127,13 @@ exports.regPost=function(req,res){
                                                                         res.redirect("/")
 
                                                    }else{
-                                                                        Message="Пароли не совпадают";
+                                                                        message="Пароли не совпадают";
                                                                         res.redirect("/reg");
 
                                                    };
 
                                   }else{
-                                                    Message="Такой пользователь уже существует";
+                                                    message="Такой пользователь уже существует";
                                                     res.redirect("/reg");
                                   }
                                   });
