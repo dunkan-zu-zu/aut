@@ -106,8 +106,8 @@ exports.startGet=function(req,res){ start="СТАРТОВАЯ СТРАНИЦА" 
                                    };
 
 exports.regGet=function(req,res){
-                                     ErrorMessage=Message;
-                                     Message=""
+                                     ErrorMessage=message;
+                                     message=""
                                      Title="Registration";
                                      res.render(__dirname+"/pages/reg.jade",{Title:Title,ErrorMessage:ErrorMessage});
 
