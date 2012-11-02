@@ -5,11 +5,13 @@ html
         h1=user
         br
         include heder
-
-        each text in texts
+        table
+         each text in texts
             form
+               tr
                 h5=text.data
                 br
-                textarea(align="center")=text.text
+                h4
+                 textarea(rows=20, cols=100)=text.text
 
 

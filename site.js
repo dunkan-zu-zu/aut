@@ -7,7 +7,7 @@
  */
 
 var mongoose=require("mongoose"),
-    db = mongoose.createConnection('localhost', 'test');
+    db = mongoose.createConnection('localhost','test');
 var Schema = mongoose.Schema;
 var textSchema=new Schema({
     Writer:String,

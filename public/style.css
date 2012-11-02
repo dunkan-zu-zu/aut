@@ -30,6 +30,8 @@ td{
 
 textarea{
         text-align: center;
+        rows: 20;
+        cols:5;
 }
 div{
     width:100px; height:100px;background:#F00;
