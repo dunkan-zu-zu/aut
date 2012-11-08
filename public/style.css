@@ -12,7 +12,7 @@ h5{
 }
 table{
     align: center;
-    width:100%;
+
     background-color: yellow;
 
 }
@@ -21,18 +21,27 @@ p{
      font: "Book Antiqua";
 
 }
+table {
+
+    *border-collapse: collapse; /* Для IE7 и страше */
+
+    border-spacing: 2;
+
+}
 
 td{
     background-color: #9acd32;
     text-align: center;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 
 }
+
+
 
 textarea{
-        text-align: center;
-        rows: 20;
-        cols:5;
+         text-align: center;
+
 }
-div{
-    width:100px; height:100px;background:#F00;
-}
+
+

@@ -175,3 +175,18 @@ exports.exit=function(req,res){
     res.redirect("/");
 
 }
+
+exports.userInformGet=function(req,res){
+    UserAutorisation.findOne({"_id":req.route.params.id},function(err,data){
+     console.log(data)
+    res.render(
+        __dirname+"/pages/userInform.jade" ,{
+            userName:data.UserName,
+            userPrename:data.UserSurname,
+            userPassword:data.UserPassword,
+            userEmail:data.UsereMail
+        }
+    )
+
+    })
+}

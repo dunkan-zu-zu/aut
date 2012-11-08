@@ -1,17 +1,23 @@
 html
     include title
 
+
     body
+        script(src="/script.js")
+
         h1=user
         br
         include heder
-        table
+
+        table(id="table1",class="visibality")
          each text in texts
             form
-               tr
+              tr
                 h5=text.data
                 br
                 h4
                  textarea(rows=20, cols=100)=text.text
+
+
 
 

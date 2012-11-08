@@ -42,6 +42,7 @@ app.get("/myPage",site.myPageGet);
 app.post("/myPage",site.myPagePost);
 app.post("/textRemove/:id?",site.textRemove);
 app.get("/exit",site.exit)
+app.get("/userInform/:id?",site.userInformGet);
 
 if(!module.parent){
 app.listen(3002);

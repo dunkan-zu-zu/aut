@@ -11,14 +11,25 @@
      body
 
           h1=Title
-          br
+
           include heder
-          each user in UsersNames
+          div(style="float: left; width: 100%;")
+             div(style="float: left; width: 25%;")
+              table(id="table2",width="20%")
 
-              h3
-                a(href="/user/"+   user._id )
-                  li= user.UserName
-                li=user.UserPassword
+                each user in UsersNames
 
-          h4
+                 tr
+
+                   td(value=""+user._id )
+
+
+                       h3
+
+                          a(href="/user/"+ user._id)
+                           li= user.UserName
+
+             div(style="float: left; width: 75%;",id="content")
+          div
+            h4
              a(href="/remove") Удаление пользователей
