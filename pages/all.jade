@@ -18,16 +18,17 @@
               table(id="table2",width="20%")
 
                 each user in UsersNames
+                  form(class="userName")
+                    tr
 
-                 tr
+                      td(value=""+user._id )
 
-                   td(value=""+user._id )
+                         input(type="hidden",name="userId",value=""+user._id)
+
+                         h3
 
 
-                       h3
-
-                          a(href="/user/"+ user._id)
-                           li= user.UserName
+                            li= user.UserName
 
              div(style="float: left; width: 75%;",id="content")
           div

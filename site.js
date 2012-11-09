@@ -114,27 +114,27 @@ exports.regGet=function(req,res){
                                 };
 
 exports.regPost=function(req,res){
-
+                                     console.log(req.query.usersPassword1+""+req.query.usersPassword2)
                                   var userAutorisation=new UserAutorisation;
-                                  UserAutorisation.findOne({"UserName":req.body.usersName},function(arr,data){
+                                  UserAutorisation.findOne({"UserName":req.query.usersName},function(arr,data){
                                   if(data==null) {
-                                                   userAutorisation.UserName=req.body.usersName;
-                                                   if(req.body.usersPassword1==req.body.usersPassword2){
-                                                                        userAutorisation.UserPassword=req.body.usersPassword2;
-                                                                        userAutorisation.UserSurname=req.body.usersSurname;
-                                                                        userAutorisation.UsereMail=req.body.usersEmail;
+                                                   userAutorisation.UserName=req.query.usersName;
+                                                   if(req.query.usersPassword1==req.query.usersPassword2){
+                                                                        userAutorisation.UserPassword=req.query.usersPassword2;
+                                                                        userAutorisation.UserSurname=req.query.usersSurname;
+                                                                        userAutorisation.UsereMail=req.query.usersEmail;
                                                                         userAutorisation.save();
-                                                                        res.redirect("/")
+                                                                        res.send("<h1>Регистрация прошла успешно</h1>")
 
                                                    }else{
-                                                                        message="Пароли не совпадают";
-                                                                        res.redirect("/reg");
+
+                                                                        res.send("<h1>"+"Пароли не совпадают"+"</h1>");
 
                                                    };
 
                                   }else{
-                                                    message="Такой пользователь уже существует";
-                                                    res.redirect("/reg");
+
+                                                    res.send("<h1>"+"Такой пользователь уже существует"+"</h1>");
                                   }
                                   });
 
@@ -189,4 +189,23 @@ exports.userInformGet=function(req,res){
     )
 
     })
+}
+
+exports.exit_and_regGet=function(req,res){
+    var data="";
+    if(req.session.user==undefined){
+        var data1={};
+        data1[0]="<p>Registration<p>"
+        data1[1]="/reg"
+
+        data=data1
+        console.log(data1)
+    }else{
+        var data2={};
+        data2[0]="<p>Exit<p>"
+        data2[1]="/exit"
+        data=data2
+        console.log(data2)
+    }
+    res.send(data)
 }

@@ -43,6 +43,7 @@ app.post("/myPage",site.myPagePost);
 app.post("/textRemove/:id?",site.textRemove);
 app.get("/exit",site.exit)
 app.get("/userInform/:id?",site.userInformGet);
+app.get("/exit_and_reg",site.exit_and_regGet);
 
 if(!module.parent){
 app.listen(3002);
